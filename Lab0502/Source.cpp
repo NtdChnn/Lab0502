@@ -39,7 +39,7 @@ void delete_ammo(int x, int y)
 int main()
 {
 	setcursor(0);
-	int x1 = 38, y1 = 20,x2=38, y2=20, i = 0, j = 0;
+	int x1 = 38,x2 = 38, y1 = 20 ,y2 = 20, i = 0,k = 0;
 	draw_ship(x1, y1);
 	char ch = '.';
 	do {
@@ -49,13 +49,14 @@ int main()
 			if (ch == 'a') { i = 1;}
 			if (ch == 'd') { i = 2;}
 			if (ch == 's') { i = 0;}
-			if (ch == ' ') { j = 1;}
+			if (ch == ' ') { k = 1;}
 		}
-		if (i == 1 && x1 > 0) { delete_ship(x1, y1); draw_ship(--x1, y1); Sleep(100); }
-		if (i == 2 && x1 < 75){ delete_ship(x1, y1); draw_ship(++x1, y1); Sleep(100); }
-		if (j == 0) { x2 = x1; }
-		if (j == 1 && y2 > 0) { delete_ammo(x2, y2); draw_ammo(x2, --y2);  }
-		if (y2 == 1) { delete_ammo(x2, y2); j = 0; y2 = y1; }
+		if (i == 1 && x1 > 0) { delete_ship(x1, y1); draw_ship(--x1, y1); }
+		if (i == 2 && x1 < 75){ delete_ship(x1, y1); draw_ship(++x1, y1); }
+		if (k == 0) { x2 = x1; }
+		if (k == 1 && y2 > 0) { delete_ammo(x2, y2); draw_ammo(x2, --y2); }
+		if (y2 == 1) { delete_ammo(x2, y2); k = 0; y2 = y1; }
+		Sleep(100);
 	} while (ch != 'x');
 	return 0;
 }
