@@ -39,7 +39,7 @@ void delete_ammo(int x, int y)
 int main()
 {
 	setcursor(0);
-	int x1 = 38,x2 = 38, y1 = 20 ,y2 = 20, i = 0,k = 0,cou;
+	int x1 = 38,x2 = 38, y1 = 20 ,y2 = 20, i = 0,k = 0;
 	draw_ship(x1, y1);
 	char ch = '.';
 	do {
