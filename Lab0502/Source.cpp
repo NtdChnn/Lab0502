@@ -29,7 +29,7 @@ void setcursor(bool visible)
 }
 void draw_ammo(int x, int y)
 {
-	gotoxy(x += 2,--y); setcolor(2, 0); printf("^");
+	gotoxy(x += 2,--y); setcolor(2, 0); printf("A");
 }
 void delete_ammo(int x, int y)
 {
@@ -39,7 +39,7 @@ void delete_ammo(int x, int y)
 int main()
 {
 	setcursor(0);
-	int x1 = 38,x2 = 38, y1 = 20 ,y2 = 20, i = 0,k = 0;
+	int x1 = 38,x2 = 38, y1 = 20 ,y2 = 20, i = 0,k = 0,cou;
 	draw_ship(x1, y1);
 	char ch = '.';
 	do {
